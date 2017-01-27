@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+li {
+    float: left;
+}
+    .navbar {
+      margin-bottom: 100px;
+      border-radius: 30;
+    }
+    li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    </style>
+</head>
+
+
+<body>
+
+<div class="navbar">
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
+</div>
+</div>
+
+
+</body>
+
+<body>
+<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jssor.slider.mini.js"></script>
+   <div class=cont>
+    <div class="row">
+      <div id="slider" class="col-md-12">
+        <script>
+          init_jssor_slider1 = function (containerId) {
+                  var options = {
+                    $AutoPlay: true,
+                      $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $Cols is greater than 1, or parking position is not 0)
+                      $SlideDuration: 200,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+
+                      $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+                          $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                          $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                          $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                          $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+                      }
+                  };
+
+                  var jssor_slider1 = new $JssorSlider$(containerId, options);
+              };
+          </script>
+
+    
+<div id="slider1_container" style="position: relative; left: 0px; top: 0px; width: 1910px; height: 700px; overflow: hidden;">
+            <!-- Slides Container -->
+            <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 1910px; height: 700px; overflow: hidden;">
+                <div><img u="image" src="red1.jpg" /></div>
+                <div><img u="image" src="1.png" /></div>
+                <div><img u="image" src="2.jpg" /></div>
+            </div>
+
+            <style>
+
+                  .jssora06l, .jssora06r {
+                      display: block;
+                      position: absolute;
+                      /* size of arrow element */
+                      width: 45px;
+                      height: 45px;
+                      cursor: pointer;
+                      background: url(a12.png) no-repeat;
+                      overflow: hidden;
+                  }
+                  .jssora06l { background-position: -8px -38px; }
+                  .jssora06r { background-position: -68px -38px; }
+                  .jssora06l:hover { background-position: -128px -38px; }
+                  .jssora06r:hover { background-position: -188px -38px; }
+                  .jssora06l.jssora06ldn { background-position: -248px -38px; }
+                  .jssora06r.jssora06rdn { background-position: -308px -38px; }
+
+                  .jssora06l.jssora06lds { background-position: -8px -38px; opacity: .3; pointer-events: none; }
+                  .jssora06r.jssora06rds { background-position: -68px -38px; opacity: .3; pointer-events: none; }
+              </style>
+              <!-- Arrow Left -->
+              <span u="arrowleft" class="jssora06l" style="top: 123px; left: 8px;">
+              </span>
+              <!-- Arrow Right -->
+              <span u="arrowright" class="jssora06r" style="top: 123px; right: 8px;">
+              </span>
+              <!--#endregion Arrow Navigator Skin End -->
+              <a style="display: none" href="http://www.jssor.com">jQuery Slider</a>
+              <!-- Trigger -->
+              <script>
+                  init_jssor_slider1("slider1_container");
+              </script>
+          </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
